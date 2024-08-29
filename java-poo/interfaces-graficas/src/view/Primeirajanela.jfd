@@ -1,0 +1,64 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"foreground": sfield java.awt.SystemColor controlDkShadow
+			"modalExclusionType": enum java.awt.Dialog$ModalExclusionType TOOLKIT_EXCLUDE
+			"title": "Olá"
+			"cursor": new java.awt.Cursor( 3 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"foreground": new java.awt.Color( 102, 102, 102, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+					"columns": 3
+					"rows": 3
+					"hgap": 3
+					"vgap": 5
+				} ) {
+					name: "contentPanel"
+					"border": sfield com.jgoodies.forms.factories.Borders DIALOG_BORDER
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Informe o texto aqui ..."
+						"font": new java.awt.Font( "Inter", 1, 14 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+						"foreground": new java.awt.Color( 43, 45, 48, 255 )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets dialog,alignx right"
+					"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][button,fill][button,fill]"
+					"$rowSpecs": "[fill]"
+				} ) {
+					name: "buttonBar"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "OK"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "cancelButton"
+						"text": "Cancel"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 120, 50 )
+			"size": new java.awt.Dimension( 335, 235 )
+		} )
+	}
+}
